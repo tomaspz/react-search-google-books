@@ -5,6 +5,7 @@ import Footer from './components/Shared/Footer';
 import Jumbotron from './components/Shared/Jumbotron';
 import Search from './containers/Search/Search';
 import Library from './containers/Library/Library';
+import BookDetail from './containers/BookDetail/BookDetail';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route exact path="/" component={Search} />
       <Route exact path="/search" component={Search} />
       <Route exact path="/library" component={Library} />
+      <Route exact path="/books/:id" component={BookDetail} />
       <Footer />
     </Router>
   );

@@ -45,6 +45,7 @@ export default class Search extends Component {
                                 <input 
                                     type="text"
                                     name="book" 
+                                    value={this.state.book}
                                     className="input-control" 
                                     placeholder="Book's title" 
                                     aria-label="Book's title" 
@@ -73,9 +74,10 @@ export default class Search extends Component {
                                         id={book.id}
                                         title={book.volumeInfo.title} 
                                         image={book.volumeInfo.imageLinks.thumbnail}
-                                        author={book.volumeInfo.authors}
+                                        author={book.volumeInfo.authors.join(", ")}
                                         description={book.volumeInfo.description}
                                         category={book.volumeInfo.categories}
+                                        link={book.volumeInfo.infoLink}
                                     />
                                 )
                             })}

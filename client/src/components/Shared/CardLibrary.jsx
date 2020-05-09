@@ -28,9 +28,8 @@ const Card = (props) => {
                     <p style={style.p}><strong>Authors: </strong> {props.author}</p>
                     <p style={style.p} className="card-text"><strong>Description: </strong> {props.description}</p>
                     <p style={style.p}><strong>Category: </strong> {props.category}</p>
-                    <a href={props.link}>More Info</a>
                     <div className="card-footer">
-                        <button id={props.id} className="btn btn-primary" onClick={(e)=> handleClick(e, props)}>Add To Library</button> 
+                        <button id={props.id} className="btn btn-danger" onClick={(e)=> handleClick(e, props)}>Delete</button> 
                     </div>
                 </div>
         </div>
